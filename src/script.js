@@ -136,7 +136,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
  * Animate
  */
 
-document.addEventListener('mousemove',onDocumentMouseMove)
+document.addEventListener('mousemove', onDocumentMouseMove)
 
 let mouseX = 0
 let mouseY = 0
@@ -144,10 +144,10 @@ let mouseY = 0
 let targetX = 0
 let targetY = 0
 
-const windowX= window.innerWidth / 2;
-const windowY= window.innerHeight / 2;
+const windowX= window.innerWidth ;
+const windowY= window.innerHeight ;
 
-onDocumentMouseMove = (event)=> {
+function onDocumentMouseMove(event){
     mouseX = (event.clientX - windowX)
     mouseY = (event.clientY - windowY)
 }
@@ -158,8 +158,8 @@ const clock = new THREE.Clock()
 
 const tick = () =>
 {
-    targetX= mouseX *.001
-    targetY= mouseY *.001
+    targetX= mouseX * .001
+    targetY= mouseY * .001
 
     const elapsedTime = clock.getElapsedTime()
 
